@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js" defer></script>
     <title>Form</title>
 </head>
 <body class="content">
@@ -16,35 +17,36 @@
         <p class="first-text">Do you want to get the best trip to mountain?</p>
         <p class="second-text">You know you want. <span class="top-span">Sign Up!</span></p>
     </section>
-    <section class="mid-right">
-        <p class="text">Let's do this!</p>
-        <div class="mid-left-top">
-            <label for="fname">FIRST NAME*</label>
-              <input  type="text" id="fname" placeholder="First name" name="first-name" required/>
-        </div>
-        <div class="mid-left-mid">
-            <label for="lname">LAST NAME*</label>
-            <input  type="text" placeholder="Last Name" id="lname" name="last-name" required/>
-        </div>
-        <div class="mid-left-down">
-            <label for="email">EMAIL*</label>
-            <input  type="email" placeholder="EMAIL" id="email" name="email" required/>
-        </div>
-        <div class="mid-right-mid">
-            <label for="phone">PHONE NUMBER*</label>
-            <input  type="number" placeholder="Phone Number" id="phone" name="phone" required/>
-        </div>
-        <div class="mid-right-top">
-            <label for="password">PASSWORD*</label>
-            <input  type="password" placeholder="Password" id="password" name="password" required/>
-        </div>
-        <div class="mid-right-down">
-            <label for="confpassword">CONFIRM PASSWORD*</label>
-            <input  type="password" placeholder="Confirm Password" id="confpassword" name="confpassword" required/>
-        </div>
+        <form action="http://httpbin.org/post" method="post" class="mid-right" id="myForm" onsubmit="return validatePasswordForm()">
+            <p class="text">Let's do this!</p>
+            <div class="mid-left-top">
+                <label for="fname">FIRST NAME*</label>
+                <input  type="text" id="fname" placeholder="First name" name="first-name" required/>
+            </div>
+            <div class="mid-right-top">
+                <label for="lname">LAST NAME*</label>
+                <!-- <input  type="text" placeholder="Last Name" id="lname" name="last-name" required/> -->
+            </div>
+            <div class="mid-left-mid">
+                <label for="email">EMAIL*</label>
+                <!-- <input  type="email" placeholder="EMAIL" id="email" name="email" required/> -->
+            </div>
+            <div class="mid-right-mid">
+                <label for="phone">PHONE NUMBER*</label>
+                <!-- <input  type="number" placeholder="Phone Number" id="phone" name="phone" required/> -->
+            </div>
+            <div class="mid-left-down">
+                <label for="password">PASSWORD*</label>
+                <input  type="password" placeholder="Password" id="password" name="password" required/>
+            </div>
+            <div class="mid-right-down">
+                <label for="confpassword">CONFIRM PASSWORD*</label>
+                <input  type="password" placeholder="Confirm Password" id="confpassword" name="confpassword" required/>
+            </div>
+        </form>
     </section>
     <section class="down-right">
-        <button>Create account</button>
+        <button type="submit" form="myForm">Create account</button>
         <p>Already have an accout? <span class="down-span">Sign in!</span></p>
     </section>
 </section>
