@@ -13,7 +13,6 @@
     height: 100vh;
     grid-template-columns: 2fr 3.5fr;
     grid-template-rows: 1fr 2fr 1fr;
-    height: 100vh;
      grid-template-areas:
      "left top"
      "left mid"
@@ -148,6 +147,15 @@ input{
     border-width: small;
     border-color: #E5E7EB;
     padding: 5px 3px;
+}
+
+.input:invalid{
+    border-color: red ;
+    border-radius: 10px;
+}
+
+.input:valid{
+    border-color: green ;
 }
 
 .mid-right .text{

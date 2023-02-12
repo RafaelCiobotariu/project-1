@@ -17,11 +17,12 @@
         <p class="first-text">Do you want to get the best trip to mountain?</p>
         <p class="second-text">You know you want. <span class="top-span">Sign Up!</span></p>
     </section>
-        <form action="http://httpbin.org/post" method="post" class="mid-right" id="myForm" onsubmit="return validatePasswordForm()">
+        <form action="http://httpbin.org/post" method="post" class="mid-right" id="myForm" onsubmit="return verifyPassword()">
             <p class="text">Let's do this!</p>
             <div class="mid-left-top">
                 <label for="fname">FIRST NAME*</label>
                 <input  type="text" id="fname" placeholder="First name" name="first-name" required/>
+                
             </div>
             <div class="mid-right-top">
                 <label for="lname">LAST NAME*</label>
@@ -33,15 +34,17 @@
             </div>
             <div class="mid-right-mid">
                 <label for="phone">PHONE NUMBER*</label>
-                <input  type="number" placeholder="Phone Number" id="phone" name="phone" required/>
+                <input  type="tel" placeholder="Phone Number" id="phone" name="phone" required/>
             </div>
             <div class="mid-left-down">
                 <label for="password">PASSWORD*</label>
                 <input  type="password" placeholder="Password" id="password" name="password" required/>
+                <span id = "message" style="color:red"> </span> <br><br>  
             </div>
             <div class="mid-right-down">
                 <label for="confpassword">CONFIRM PASSWORD*</label>
                 <input  type="password" placeholder="Confirm Password" id="confpassword" name="confpassword" required/>
+                <span id = "message2" style="color:red"> </span> <br><br>  
             </div>
         </form>
     </section>

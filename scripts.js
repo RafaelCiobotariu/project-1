@@ -1,9 +1,10 @@
-function validatePasswordForm() {
-  let password = document.getElementById("password").value;
-  let confirmedPassowrd = document.getElementById("confpassword").value;
-  console.log("pssst");
-  if (password !== confirmedPassowrd) {
-    alert("Passwords doesn't match");
+function verifyPassword() {
+  let pw = document.getElementById("password").value;
+  let pwc = document.getElementById("confpassword").value;
+  //check empty password field
+  if (pw !== pwc) {
+    document.getElementById("message").innerHTML = "**Password dont match";
+    document.getElementById("message2").innerHTML = "**Password dont match";
     return false;
   }
 }
